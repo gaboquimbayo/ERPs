@@ -4,7 +4,7 @@ addpath('..\Documents\eeglab2024.0\plugins\erplab10.1');
 
 % paths
 input_dir = '7_Interpolate_VoltRej_Epoched_ICALabel_ChanRemv_Triggers_Cut_Filtered_Averaged';
-output_dir = 'ERP_Criterion_Good';
+output_dir = 'ERP_Criterion_Good\';
 
 % list of files .set
 file_list = dir(fullfile(input_dir, 'Interpolate_VoltRej_Epoched_ICALabel_ChanRemv_Triggers_Cut_Filtered_Averaged_CRB_*.set'));
@@ -43,7 +43,7 @@ addpath('..\Documents\eeglab2024.0\plugins\erplab10.1');
 
 % paths
 input_dir = '7_Interpolate_VoltRej_Epoched_ICALabel_ChanRemv_Triggers_Cut_Filtered_Averaged';
-output_dir = 'ERP_Criterion_All';
+output_dir = 'ERP_Criterion_All\';
 
 % list of files .set
 file_list = dir(fullfile(input_dir, 'Interpolate_VoltRej_Epoched_ICALabel_ChanRemv_Triggers_Cut_Filtered_Averaged_CRB_*.set'));
