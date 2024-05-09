@@ -1,6 +1,6 @@
 # ERPs
 
-This is to obtain the measurements of interest. 
+This is to obtain the regression models. 
 
 ## Usage
 
