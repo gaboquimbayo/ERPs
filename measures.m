@@ -1,5 +1,5 @@
-addpath('..\Documents\eeglab2024.0');
-addpath('..\Documents\eeglab2024.0\plugins\erplab10.1');
+addpath('..\..\eeglab2024.0');
+addpath('..\..\eeglab2024.0\plugins\erplab10.1');
 
 n2_latency = [200 300]; % Time window where N2 is expected (in ms)
 p3_latency = [300 500]; % Time window where P3 is expected (in ms)
