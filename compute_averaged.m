@@ -1,6 +1,6 @@
 %% Compute Averaged ERPs (Criterion Good)
-addpath('..\Documents\eeglab2024.0');
-addpath('..\Documents\eeglab2024.0\plugins\erplab10.1');
+addpath('..\..\eeglab2024.0');
+addpath('..\..eeglab2024.0\plugins\erplab10.1');
 
 % paths
 input_dir = '7_Interpolate_VoltRej_Epoched_ICALabel_ChanRemv_Triggers_Cut_Filtered_Averaged';
@@ -38,8 +38,8 @@ for i = 1:length(file_list)
 end
 
 %% Compute Averaged ERPs (Criterion All)
-addpath('..\Documents\eeglab2024.0');
-addpath('..\Documents\eeglab2024.0\plugins\erplab10.1');
+addpath('..\..\eeglab2024.0');
+addpath('..\..\eeglab2024.0\plugins\erplab10.1');
 
 % paths
 input_dir = '7_Interpolate_VoltRej_Epoched_ICALabel_ChanRemv_Triggers_Cut_Filtered_Averaged';
