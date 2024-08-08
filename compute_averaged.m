@@ -1,10 +1,12 @@
+% This code was written by Gabriel Quimbayo & Reviewed by Dr. Leidy Cubillos-Pinilla 
+
 %% Compute Averaged ERPs (Criterion Good)
 addpath('..\..\eeglab2024.0');
-addpath('..\..eeglab2024.0\plugins\erplab10.1');
+addpath('..\..\eeglab2024.0\plugins\erplab10.1\');
 
 % paths
 input_dir = '7_Interpolate_VoltRej_Epoched_ICALabel_ChanRemv_Triggers_Cut_Filtered_Averaged';
-output_dir = 'ERP_Criterion_Good\';
+output_dir = 'ERP_Criterion_All\';
 
 % list of files .set
 file_list = dir(fullfile(input_dir, 'Interpolate_VoltRej_Epoched_ICALabel_ChanRemv_Triggers_Cut_Filtered_Averaged_CRB_*.set'));
@@ -26,13 +28,13 @@ for i = 1:length(file_list)
     end
 
     % Filter design (IIR 8Hz)
-    Filt_ERP = pop_filterp(ERP, 1:32, 'Cutoff', [ 0.1 8], 'Design', 'butter', 'Filter', 'bandpass', 'Order',  2 );
+    Filt_ERP = pop_filterp(ERP, 1:32, 'Cutoff', [ 0.1 8], 'Design', 'butter', 'Filter', 'bandpass', 'Order',  2, 'RemoveDC', 'on' );
     
     % Bin operation. (BIN3 = BIN2 - BIN1)
     Bin_ERP = pop_binoperator( Filt_ERP, { 'BIN3 = b1-b2 label First-Latter difference' } );
 
     % Save ERPset
-    erp_name = sprintf('ERPSET_Good_CRB_%s', subject_code);
+    erp_name = sprintf('ERPSET_All_CRB_%s', subject_code);
     out_file_name = strcat(erp_name, '.erp');
     ERPavg = pop_savemyerp(Bin_ERP, 'erpname', erp_name, 'filename', out_file_name, 'filepath', output_dir, 'Warning', 'on');
 end

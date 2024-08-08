@@ -1,3 +1,5 @@
+% This code was written by Gabriel Quimbayo & Reviewed by Dr. Leidy Cubillos-Pinilla 
+
 addpath('..\..\eeglab2024.0');
 addpath('..\..\eeglab2024.0\plugins\erplab10.1');
 
@@ -12,13 +14,13 @@ addpath('..\..\eeglab2024.0\plugins\erplab10.1');
 'ERPSET_Good_CRB_068.erp', 'ERPSET_Good_CRB_069.erp', 'ERPSET_Good_CRB_070.erp', 'ERPSET_Good_CRB_072.erp', 'ERPSET_Good_CRB_074.erp', ...
 'ERPSET_Good_CRB_075.erp', 'ERPSET_Good_CRB_076.erp'}, 'filepath', 'ERP_Criterion_Good\' );
 
-% Grand Averager
+% Grand Average
 Grand_Avg = pop_gaverager( ALLERP , 'DQ_flag', 1, 'DQ_spec', 'DQ_spec_structure', 'Erpsets', 1:41, 'ExcludeNullBin', 'on', 'SEM', 'on' );
 % Grand_Avg_save = pop_savemyerp(Grand_Avg, 'erpname', 'Grand_Avg', 'filename', 'Grand_Avg.erp', 'Warning', 'on');
 
 %%
 
-% load .erp with grand averager
+% load .erp with grand average
 Grand_Avg_ERP = pop_loaderp( 'filename', 'Grand_Avg.erp', 'filepath', 'C:\Users\gabri\OneDrive\Documents\Cognitive_Effort\ERPs\' );
 
 % plot in P3 electrode
@@ -26,3 +28,7 @@ pop_ploterps( Grand_Avg_ERP,  1,  14 , 'Axsize', [ 0.05 0.08], 'BinNum', 'on', '
  'FontSizeLeg',  12, 'FontSizeTicks',  10, 'LegPos', 'none', 'Linespec', {'k-' }, 'LineWidth',  1, 'Position', [ 82.875 14.2857 106.875 31.9048],...
  'SEM', 'on', 'Style', 'Classic', 'Tag', 'ERP_figure', 'Transparency',  0.8, 'xscale', [ -200.0 1196.0   -200:200:1000 ], 'YDir',...
  'normal', 'yscale', [ -4.0 4.0   -4:4 ] );
+
+pop_scalplot( ERP,  1:3, [ 300 500] , 'Blc', 'pre', 'Colormap', 'viridis', 'Electrodes', 'ptslabels', 'FontName', 'Courier New',...
+ 'FontSize',  10, 'Legend', 'bd-la', 'Maplimit', 'maxmin', 'Mapstyle', 'both', 'Maptype', '2D', 'Mapview', '+X', 'Maximize', 'on', 'Plotrad',  0.55,...
+ 'Position', [ 18.2 -6.8 1521.6 870.4], 'Value', 'mean' );
