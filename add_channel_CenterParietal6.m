@@ -1,4 +1,9 @@
-% Load ERP data from two files ('ERP_GA_high.erp' and 'ERP_GA_low.erp') located in the specified filepath.
+% This code was written by Gabriel Quimbayo Polo & Reviewed by Dr. Leidy Cubillos-Pinilla 
+
+%% Calculate a new channel defined for the region: Center parietal 6 consisting for the electrodes CP1, CP2, Pz, P3 and P4
+addpath('..\..\eeglab2024.0');
+addpath('..\..\eeglab2024.0\plugins\erplab10.1\');
+
 % Load ERP for each group (High and Low)
 [ERP, ALLERP] = pop_loaderp( ...
     'filename', {'ERP_GA_high.erp', 'ERP_GA_low.erp'}, ... % Specify the names of the ERP files to load

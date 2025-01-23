@@ -1,3 +1,9 @@
+% This code was written by Gabriel Quimbayo Polo & Reviewed by Dr. Leidy Cubillos-Pinilla 
+
+%% Calculate grand average for each group (High & Low)
+addpath('..\..\eeglab2024.0');
+addpath('..\..\eeglab2024.0\plugins\erplab10.1\');
+
 % Define lists of subject IDs for each group based on their arithmetic averages
 high_intention = [3, 4, 15, 17, 24, 26, 27, 34, 35, 37, 40, 45, 49, 50, 58, 65, 66, 70, 75, 76];
 low_intention = [1, 5, 8, 12, 18, 28, 29, 32, 42, 43, 54, 56, 59, 60, 61, 62, 67, 68, 69, 72, 74];
