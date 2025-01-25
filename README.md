@@ -12,4 +12,5 @@ To use the Jupyter code in this repository you have to install some libraries, i
 $ pip install numpy
 $ pip install statsmodels
 $ pip install pandas
+$ pip install matplotlib
 ```
