@@ -1,4 +1,4 @@
-% This code was written by Gabriel Quimbayo Polo & Reviewed by Dr. Leidy Cubillos-Pinilla 
+% This code was written by Gabriel Quimbayo Polo & Reviewed by Dr. Leidy Cubillos-Pinilla. 
 
 %% Calculate grand average for each group (High & Low)
 addpath('..\..\eeglab2024.0');

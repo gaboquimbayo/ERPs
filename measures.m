@@ -1,4 +1,4 @@
-% This code was written by Gabriel Quimbayo & Reviewed by Dr. Leidy Cubillos-Pinilla 
+% This code was written by Gabriel Quimbayo Polo & Reviewed by Dr. Leidy Cubillos-Pinilla. 
 
 %% Calculate measures
 addpath('..\..\eeglab2024.0');
