@@ -1,6 +1,6 @@
 % This code was written by Gabriel Quimbayo Polo & Reviewed by Dr. Leidy Cubillos-Pinilla 
 
-%% Calculate a new channel defined for the region: Center parietal 6 consisting for the electrodes CP1, CP2, Pz, P3 and P4
+%% Calculate a new channel defined for the region: Center parietal 6 consisting for the electrodes CP1, CP2, Pz, P3 and P4.
 addpath('..\..\eeglab2024.0');
 addpath('..\..\eeglab2024.0\plugins\erplab10.1\');
 
