@@ -4,10 +4,12 @@
 addpath('..\..\eeglab2024.0');
 addpath('..\..\eeglab2024.0\plugins\erplab10.1\');
 
+path = '<path>';
+
 % Load ERP for each group (High and Low)
 [ERP, ALLERP] = pop_loaderp( ...
     'filename', {'ERP_GA_high.erp', 'ERP_GA_low.erp'}, ... % Specify the names of the ERP files to load
-    'filepath', '...\ERPs\Intention_Grand_Avgs\' ... % Path to the directory where the files are stored
+    'filepath', sprintf('%sIntention_Grand_Avgs\', path) ... % Path to the directory where the files are stored
 );
 
 % Loop through all loaded ERPs in ALLERP (High and Low)
